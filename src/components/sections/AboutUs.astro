@@ -1,0 +1,106 @@
+---
+import Info from "../cards/Info.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import addUtilities from "/XEVZZY/Prueb01at/tailwind.config.cjs"
+---
+
+<section id="about-us" class="p-4 sm:p-8">
+    <Container className="flex flex-col md:flex-row gap-10 lg:gap-12">
+        <div
+            class=" md:flex-1"
+        >
+            <div class=" rmax-w-md mx-auto md:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 ">
+                <div
+                    class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"
+                >
+                </div>
+                <div
+                    class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"
+                >
+                </div>
+                <div class=" gap-5 mb-4 mt-4 mr-4 ml-4">
+                    <Title> ¿Por qué elegirnos? </Title>
+                    <Paragraph className="mt-8">
+                        En Puertas Educativas, estamos dedicados a simplificar
+                        la búsqueda de vacantes en colegios de educación inicial
+                        en el distrito de Santiago, Cusco. Nuestra plataforma
+                        web está diseñada para brindar a los padres y
+                        representantes una manera fácil y rápida de encontrar
+                        información sobre opciones educativas disponibles.
+                        Nuestro objetivo es mejorar el acceso a la educación y
+                        promover la inclusión escolar en nuestra comunidad.
+                        Únete a nosotros para facilitar tu búsqueda y garantizar
+                        un futuro educativo brillante para tus hijos.
+                    </Paragraph>
+                </div>
+
+                <span class="absolute w-full md:w-3/6 aspect-[31/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0  md:-translate-x-1/2 md:left-1/2"></span>
+                <img
+                    src={"/images/niñoopt.webp"}
+                    alt="banner image"
+                    class="w-auto left-1/2 -translate-x-1/2 relative bottom-0 max-h-100 mask-image"
+                />
+            </div>
+            
+        </div>
+        <div class="md:flex-1 ">
+            <div
+                class="pt-8 grid md:flex md:flex-col md:items-center gap-4 max-w-3xl md:max-w-none"
+            >
+                <Info
+                    description="Nuestra misión en Puertas Educativas es promover el acceso equitativo a la educación inicial en el distrito de Santiago del Cusco, Perú, proporcionando una plataforma digital centralizada que brinde información actualizada y confiable sobre las instituciones educativas cercanas a la plaza Santiago. Nos comprometemos a mejorar la transparencia, la calidad y la accesibilidad de los servicios educativos para las familias y sus hijos, contribuyendo así al desarrollo integral de la comunidad y al empoderamiento de las futuras generaciones."
+                    title="Mision"
+                >
+                    <span slot="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 sm:w-5 sm:h-5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                            ></path>
+                        </svg>
+                    </span>
+                </Info>
+                <Info
+                    description="Nuestra visión es convertirnos en el principal recurso digital para las familias en búsqueda de educación inicial en el distrito de Santiago del Cusco. Nos esforzamos por ser reconocidos como un catalizador de cambio en la mejora de la educación temprana, promoviendo la inclusión, la igualdad de oportunidades y el acceso a una educación de calidad para todos los niños. Aspiramos a ser un referente en la transformación digital del sector educativo, inspirando a otras comunidades a adoptar soluciones innovadoras para sus necesidades educativas."
+                    title="Vision"
+                >
+                    <span slot="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 sm:w-5 sm:h-5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                            ></path>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </span>
+                </Info>
+            </div>
+            <script>
+                /&fdfdsf&/;
+            </script>
+        </div>
+    </Container>
+</section>

@@ -1,0 +1,42 @@
+---
+import Service from "../cards/Service.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { colegios } from "../../utils/data";
+
+type ColegioPrompt = {
+    titulo: string;
+    descripcion: string;
+    cupo: string;
+    PMatricula: string;
+    img: string;
+    distrito: string;
+};
+
+const filteredColegios = colegios.filter(
+    (colegio: ColegioPrompt) => colegio.distrito === "Poroy",
+);
+---
+
+<section id="instituciones">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title> Instituciones cerca de Ti </Title>
+            <Paragraph> Descubre instituciones educativas cercanas </Paragraph>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {
+                filteredColegios.map((colegio: ColegioPrompt) => (
+                    <Service
+                        title={colegio.titulo}
+                        description={colegio.descripcion}
+                        cupos={colegio.cupo}
+                        costo={colegio.PMatricula}
+                        img={colegio.img}
+                        distrito={colegio.distrito}></Service>
+                ))
+            }
+        </div>
+    </Container>
+</section>

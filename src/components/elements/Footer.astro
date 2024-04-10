@@ -1,0 +1,196 @@
+---
+import GroupFooterNav from "../blocks/GroupFooterNav.astro";
+import Container from "../shared/Container.astro";
+import FooterNav from "../shared/FooterNav.astro";
+import Paragraph from "../shared/Paragraph.astro";
+const footerNav1 = [
+    {
+        itemText:"Marketing",
+        itemLink:"#"
+    },
+    {
+        itemText:"Analylitics",
+        itemLink:"#"
+    },
+    {
+        itemText:"Commerce",
+        itemLink:"#"
+    },
+    {
+        itemText:"Insights",
+        itemLink:"#"
+    }
+]
+
+const footerSupport = [
+    {
+        itemText:"Pricing",
+        itemLink:"#"
+    },
+    {
+        itemText:"Guides",
+        itemLink:"#"
+    },
+    {
+        itemText:"FAQ",
+        itemLink:"#"
+    },
+    {
+        itemText:"Contact",
+        itemLink:"#"
+    }
+]
+
+const footerCompany = [
+    {
+        itemText:"About",
+        itemLink:"/about"
+    },
+    {
+        itemText:"Blog",
+        itemLink:"#"
+    },
+    {
+        itemText:"Jobs",
+        itemLink:"#"
+    },
+    {
+        itemText:"Parteners",
+        itemLink:"#"
+    },
+    {
+        itemText:"Jobs",
+        itemLink:"#"
+    }
+]
+const footerLegal = [
+    {
+        itemText:"Claim",
+        itemLink:"/#"
+    },
+    {
+        itemText:"Privacy",
+        itemLink:"#"
+    },
+    {
+        itemText:"Terms",
+        itemLink:"#"
+    }
+]
+---
+<div class="mt-16"></div>
+<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
+    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+            <span
+                class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#f34141] rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+            </div>
+        </div>
+
+        <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+            <span
+                class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+            ></span>
+            <span
+                class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+            </div>
+        </div>
+    <Container className="pb-8 relative overflow-auto">
+        
+        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
+        <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
+            <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+                <div class="h-full">
+                    <a href="#" class="relative flex items-center gap-3">
+                        <div class="relative w-15 h-15 overflow-hidden flex rounded-full place-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12 text-white">
+                                <g fill="none">
+                                <path fill="#9DE3D1" d="M50 256h240v240H50z"></path>
+                                <path fill="#FF7B79" d="M10 16h240v240H10z"></path>
+                                <path fill="#80B6FF" d="M241.928 132.931l239.04-20.88 20.88 239.04-239.04 20.88z"></path>
+                                <path fill="#000" d="M214.373 417.515s-33.059-88.917-33.095-89.007c-1.849-4.562-6.215-7.508-11.126-7.508h-.013c-4.916.005-9.282 2.961-11.124 7.531-.03.074-33.379 88.956-33.379 88.956-1.94 5.171.679 10.935 5.85 12.875a9.98 9.98 0 0 0 3.511.64c4.048 0 7.858-2.477 9.364-6.49l5.857-15.612h39.613l5.794 15.584c1.924 5.176 7.679 7.814 12.858 5.888 5.178-1.923 7.815-7.68 5.89-12.857zm-56.649-28.614 12.393-33.032 12.28 33.032zM130 296c0-5.523-4.477-10-10-10H90c-5.523 0-10 4.477-10 10v30c0 5.523 4.477 10 10 10s10-4.477 10-10v-20h20c5.523 0 10-4.477 10-10zM250 416c-5.523 0-10 4.477-10 10v20h-20c-5.523 0-10 4.477-10 10s4.477 10 10 10h30c5.523 0 10-4.477 10-10v-30c0-5.523-4.477-10-10-10zM60 86V66h20c5.523 0 10-4.477 10-10s-4.477-10-10-10H50c-5.523 0-10 4.477-10 10v30c0 5.523 4.477 10 10 10s10-4.477 10-10zM175 226h30c5.523 0 10-4.477 10-10v-30c0-5.523-4.477-10-10-10s-10 4.477-10 10v20h-20c-5.523 0-10 4.477-10 10s4.477 10 10 10zM102.5 191h.044c.241-.001 24.156-.107 30.701-.107 18.888 0 34.254-15.354 34.254-34.225 0-11.161-5.376-21.089-13.675-27.341a30.512 30.512 0 0 0 5.584-17.618C159.408 94.776 145.62 81 128.674 81H102.5c-5.523 0-10 4.477-10 10v90a10.001 10.001 0 0 0 10 10zm30.746-20.107c-3.783 0-13.288.035-20.746.065v-28.49c2.179-.009 4.495-.018 6.709-.025h14.036c7.86 0 14.254 6.381 14.254 14.226.001 7.843-6.394 14.224-14.253 14.224zM128.674 101c5.919 0 10.734 4.804 10.734 10.709s-4.815 10.709-10.734 10.709c-1.923 0-5.544.01-9.493.024H112.5V101z" fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                <path d="m511.963 350.21-6.53-74.71a9.995 9.995 0 0 0-3.229-6.52 9.975 9.975 0 0 0-7.61-2.57 9.954 9.954 0 0 0-6.79 3.53 9.94 9.94 0 0 0-2.3 7.3l5.67 64.75-219.171 19.18-19.171-219.16 219.162-19.18 5.67 64.75a9.952 9.952 0 0 0 3.22 6.52c2.06 1.88 4.83 2.82 7.61 2.58 5.489-.49 9.569-5.35 9.09-10.84l-6.54-74.71c-.221-2.62-1.51-5.1-3.53-6.79s-4.69-2.53-7.3-2.3l-220.211 19.259V16c0-5.523-4.477-10-10-10H10C4.477 6 0 10.477 0 16v240c0 5.523 4.477 10 10 10h30v230c0 5.523 4.477 10 10 10h240.001c5.522 0 10-4.477 10-10V378.792l202.871-17.742c2.62-.23 5.1-1.52 6.79-3.54s2.53-4.68 2.301-7.3zM20 26h220.001v97.116c-4.913.996-8.417 5.555-7.97 10.674l7.97 91.086V246H20zm260.002 460H60V266h183.6l9.351 106.87c.23 2.63 1.52 5.1 3.53 6.79 1.8 1.51 4.089 2.34 6.45 2.34.28 0 .57-.01.851-.04l16.22-1.418z" fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                <path d="M325.18 165.791a9.992 9.992 0 0 0-10.834-9.09l-29.885 2.615c-5.502.481-9.572 5.332-9.091 10.833l2.614 29.886c.455 5.206 5.263 9.11 10.392 9.11 5.502-.481 10.014-5.351 9.532-10.853l-1.743-19.924 19.925-1.743c5.501-.482 9.571-5.333 9.09-10.834zM468.63 313.852l-2.614-29.886c-.48-5.501-5.341-9.566-10.833-9.09-5.502.481-9.572 5.332-9.091 10.833l1.743 19.924-19.925 1.743c-5.501.481-9.571 5.332-9.09 10.833.455 5.206 4.513 9.121 10.392 9.11l30.327-2.634c5.502-.481 9.572-5.331 9.091-10.833zM379.471 208.648c6.503-.569 12.956.896 18.672 4.236 4.77 2.787 10.893 1.179 13.679-3.589 2.786-4.769 1.18-10.893-3.589-13.679-9.31-5.44-19.858-7.822-30.505-6.891-14.177 1.24-26.977 8.162-36.04 19.491-8.953 11.191-13.183 25.366-11.91 39.914 1.272 14.547 7.899 27.772 18.66 37.239 9.727 8.557 21.775 13.136 34.336 13.136 1.507 0 3.021-.066 4.54-.199 11.689-1.022 21.809-5.942 29.263-14.227a45.53 45.53 0 0 0 4.033-5.203c3.062-4.596 1.818-10.805-2.778-13.867-4.595-3.062-10.803-1.819-13.866 2.778a25.33 25.33 0 0 1-2.255 2.913c-4.063 4.516-9.493 7.101-16.14 7.682-8.678.757-17.175-2.092-23.923-8.029-6.881-6.054-11.124-14.565-11.946-23.966s1.878-18.52 7.604-25.676c5.614-7.02 13.486-11.304 22.165-12.063z" fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                <circle cx="491.554" cy="231.54" r="10" fill="#000000" opacity="1" data-original="#000000" class=""></circle>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="inline-flex text-lg font-semibold text-heading-1">
+                            Puertas Educativas
+                        </div>
+                    </a>
+                    <Paragraph className={"mt-8"}>
+                        ¡Explora las oportunidades educativas en Puertas Educativas! Buscar vacantes nunca ha sido tan fácil. Encuentra tu próximo destino educativo con nosotros.
+                    </Paragraph>
+                </div>
+
+                <!-- social links -->
+                <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                        <span class="sr-only">social link</span>
+                    </a>
+
+                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                        <span class="sr-only">social link</span>
+                    </a>
+
+                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                        </svg>
+                        <span class="sr-only">social link</span>
+                    </a>
+
+                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <span class="sr-only">social link</span>
+                    </a>
+                </div>
+            </div>
+
+            <GroupFooterNav>
+                <FooterNav title={"Company"} navItems={footerCompany}/>
+                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+            </GroupFooterNav>
+
+            <GroupFooterNav>
+                <FooterNav title={"Support"} navItems={footerSupport}/>
+                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+            </GroupFooterNav>
+
+        </div>
+    </Container>
+    <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
+        <Container>
+            <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
+                <div>
+                    &copy; <span id="year"></span>Puertas Educativas. Todos los derechos reservados
+                </div>
+                <div>
+                    Hecho por <a href="" target="_blank" class="font-semibold">Kev JM</a>
+                </div>
+            </div>
+        </Container>
+    </div>
+</footer>
