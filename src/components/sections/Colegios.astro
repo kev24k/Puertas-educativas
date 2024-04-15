@@ -1,9 +1,10 @@
 ---
+import { colegios } from "../../utils/data";
+import { getSearchValue } from "../../utils/search";
 import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-import { colegios } from "../../utils/data";
 
 type ColegioPrompt = {
     titulo: string;
@@ -14,29 +15,44 @@ type ColegioPrompt = {
     distrito: string;
 };
 
-const filteredColegios = colegios.filter(
-    (colegio: ColegioPrompt) => colegio.distrito === "Poroy",
-);
+
+
+
+const searchTerm = getSearchValue().trim().toLowerCase(); // Obtener el término de búsqueda actual normalizado
+
+// Filtrar colegios por el distrito normalizado que coincide con el término de búsqueda normalizado
+const filteredColegios = colegios.filter((colegio: ColegioPrompt) => {
+    const distritoLower = colegio.distrito.trim().toLowerCase();
+    return distritoLower === searchTerm;
+});
 ---
 
+
 <section id="instituciones">
-    <Container className="space-y-10 md:sapce-y-12">
+    <Container className="space-y-10 md:space-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
-            <Title> Instituciones cerca de Ti </Title>
-            <Paragraph> Descubre instituciones educativas cercanas </Paragraph>
+            <Title>Instituciones cerca de Ti</Title>
+            <Paragraph>Descubre instituciones educativas cercanas</Paragraph>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {
-                filteredColegios.map((colegio: ColegioPrompt) => (
+        
+        {filteredColegios.length > 0 ? (
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Renderizar las tarjetas de los colegios encontrados -->
+                {filteredColegios.map((colegio: ColegioPrompt) => (
                     <Service
                         title={colegio.titulo}
                         description={colegio.descripcion}
                         cupos={colegio.cupo}
                         costo={colegio.PMatricula}
                         img={colegio.img}
-                        distrito={colegio.distrito}></Service>
-                ))
-            }
-        </div>
+                        distrito={colegio.distrito}
+                    />
+                ))}
+            </div>
+        ) : (
+            <div class="text-center text-gray-600 mt-8">
+                <p>Instituciones no encontradas.</p>
+            </div>
+        )}
     </Container>
 </section>

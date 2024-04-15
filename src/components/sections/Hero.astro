@@ -3,40 +3,31 @@ import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
+// searchForm.ts
+
 ---
-
-
-
 <script>
-    export let searchValue= ""; // Estado para almacenar el valor de búsqueda
+import { setSearchValue } from "../../utils/search";
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('searchForm') as HTMLFormElement;
+    const distritoInput = document.getElementById('distritoInput') as HTMLInputElement;
 
-    function handleInputChange(event: Event) {
-        const target = event.target as HTMLInputElement;
-        searchValue = target.value;
+    if (searchForm && distritoInput) {
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevenir la recarga de la página al enviar el formulario
+
+            const distritoValue = distritoInput.value.trim();
+            // Almacenar el valor del distrito como término de búsqueda utilizando setSearchValue
+            setSearchValue(distritoValue);
+            // Realizar otras acciones como mostrar resultados, etc.
+            console.log("=",distritoValue)
+        });
     }
-
-    function handleSearch(event: Event) {
-        event.preventDefault();
-        console.log(searchValue);
-        // Llamar a una función para actualizar el estado del distrito en Service y Colegios
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', handleSearch);
-        }
-
-        const input = document.querySelector('input[type="search"]');
-        if (input) {
-            input.addEventListener('input', handleInputChange);
-        }
-    });
+});
 </script>
 
-
-<section class="relative pt-32 lg:pt-36">
-    <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
+<section  class="relative pt-32 lg:pt-36">
+    <Container  className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
         <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
             <span
                 class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
@@ -67,7 +58,7 @@ import ByNumber from "./ByNumber.astro";
             <div class="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
                 <div class="flex sm:flex-row flex-col gap-5 w-full">
                     <form
-                        class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
+                        id="searchForm" class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
                     >
                         <span class="min-w-max pr-2 border-r border-box-border">
                             <svg
@@ -88,16 +79,17 @@ import ByNumber from "./ByNumber.astro";
                         </span>
                         <input
                             type="search"
-                            name=""
-                            id=""
+                            id="distritoInput"
                             placeholder="Donde te encuentras"
                             class="w-full py-3 outline-none bg-transparent"
+                            
                         />
                         <Button
                             variant={"primary"}
-                            className={"min-w-max text-white"}
+                            className={"min-w-max text-white"} 
+                            
                         >
-                            <span class="hidden sm:flex relative z-[5]">
+                            <span class="hidden sm:flex relative z-[5]" >
                                 Buscar
                             </span>
                             <span class="flex sm:hidden relative z-[5]">
@@ -118,6 +110,7 @@ import ByNumber from "./ByNumber.astro";
                             </span>
                         </Button>
                     </form>
+                    
                 </div>
             </div>
         </div>

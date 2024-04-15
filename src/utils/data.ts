@@ -39,6 +39,7 @@ const colegios = [
         img: "/images/inicial90.webp",
         distrito: "Santiago"
     },
+        
     // Agregar más instituciones con distintos distritos ficticios
     {
         titulo: "Colegio San Francisco",
