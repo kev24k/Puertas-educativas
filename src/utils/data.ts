@@ -4,17 +4,6 @@ const colegios = [
         descripcion: "Colegio con una larga trayectoria en la enseñanza, enfocado en valores y excelencia académica.",
         cupo: "3",
         PMatricula: "300",
-<<<<<<< HEAD
-        img: "/images/inicial90.webp",
-        distrito: "Santiago"
-    },
-    {
-        titulo: "Inicial 458",
-        descripcion: "Institución educativa que promueve el desarrollo integral de los niños en un ambiente seguro y acogedor.",
-        cupo: "2",
-        PMatricula: "350",
-        img: "/images/inicial90.webp",
-=======
         img: "/images/img_1.png",
         distrito: "Santiago"
     },
@@ -24,7 +13,6 @@ const colegios = [
         cupo: "2",
         PMatricula: "350",
         img: "/images/img_2.png",
->>>>>>> 1ecfeeb (Remaster)
         distrito: "Santiago"
     },
     {
@@ -32,11 +20,7 @@ const colegios = [
         descripcion: "Jardín infantil que brinda atención personalizada y actividades lúdicas para el crecimiento y desarrollo de los niños.",
         cupo: "54",
         PMatricula: "150",
-<<<<<<< HEAD
-        img: "/images/inicial90.webp",
-=======
         img: "/images/img_3.png",
->>>>>>> 1ecfeeb (Remaster)
         distrito: "Santiago"
     },
     {
@@ -44,11 +28,7 @@ const colegios = [
         descripcion: "Centro educativo que ofrece un enfoque intercultural y actividades en contacto con la naturaleza.",
         cupo: "5",
         PMatricula: "200",
-<<<<<<< HEAD
-        img: "/images/inicial90.webp",
-=======
         img: "/images/img_3.png",
->>>>>>> 1ecfeeb (Remaster)
         distrito: "Santiago"
     },
     {
@@ -56,11 +36,7 @@ const colegios = [
         descripcion: "Colegio inspirado en la pedagogía Waldorf, promoviendo el desarrollo holístico de los niños.",
         cupo: "45",
         PMatricula: "150",
-<<<<<<< HEAD
-        img: "/images/inicial90.webp",
-=======
         img: "/images/img_5.webp",
->>>>>>> 1ecfeeb (Remaster)
         distrito: "Santiago"
     },
         
