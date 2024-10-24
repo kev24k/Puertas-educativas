@@ -1,6 +1,9 @@
 ---
 import { colegios } from "../../utils/data";
+<<<<<<< HEAD
 import { getSearchValue } from "../../utils/search";
+=======
+>>>>>>> 1ecfeeb (Remaster)
 import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
@@ -18,12 +21,19 @@ type ColegioPrompt = {
 
 
 
+<<<<<<< HEAD
 const searchTerm = getSearchValue().trim().toLowerCase(); // Obtener el término de búsqueda actual normalizado
+=======
+>>>>>>> 1ecfeeb (Remaster)
 
 // Filtrar colegios por el distrito normalizado que coincide con el término de búsqueda normalizado
 const filteredColegios = colegios.filter((colegio: ColegioPrompt) => {
     const distritoLower = colegio.distrito.trim().toLowerCase();
+<<<<<<< HEAD
     return distritoLower === searchTerm;
+=======
+    return distritoLower === "santiago";
+>>>>>>> 1ecfeeb (Remaster)
 });
 ---
 
@@ -35,7 +45,11 @@ const filteredColegios = colegios.filter((colegio: ColegioPrompt) => {
             <Paragraph>Descubre instituciones educativas cercanas</Paragraph>
         </div>
         
+<<<<<<< HEAD
         {filteredColegios.length > 0 ? (
+=======
+        
+>>>>>>> 1ecfeeb (Remaster)
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Renderizar las tarjetas de los colegios encontrados -->
                 {filteredColegios.map((colegio: ColegioPrompt) => (
@@ -49,10 +63,14 @@ const filteredColegios = colegios.filter((colegio: ColegioPrompt) => {
                     />
                 ))}
             </div>
+<<<<<<< HEAD
         ) : (
             <div class="text-center text-gray-600 mt-8">
                 <p>Instituciones no encontradas.</p>
             </div>
         )}
+=======
+        
+>>>>>>> 1ecfeeb (Remaster)
     </Container>
 </section>
